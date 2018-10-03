@@ -9,12 +9,45 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <div class="container">
-        <div class="jumbotron bg-secondary">
-            <h1 class="display-4">Cryptocurrency Trading</h1>
-        </div>
+    <div class="jumbotron bg-secondary">
+        <h1 class="display-4">Cryptocurrency Trading</h1>
+    </div>
 
-        <div id="buttonholder"></div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2 bg-dark">
+                <h1 class="title">Search</h1>
+                <input class="form-control" id="searchInput">
+                <div class="btn-group float-right" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-secondary" id="Search">Search</button>
+                    <button type="button" class="btn btn-secondary" id="Clear">Clear</button>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        <!-- <h4 class="title">Recent</h1> -->
+                        <div id="recentbuttons"></div>
+                    </div>
+                    <div class="col-sm-6">
+                        <!-- <h4 class="title">Favorites</h1> -->
+                        <div id="favoritebuttons"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 bg-info"> 
+                <h1 class="title">Information</h1>
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-secondary currencytype" value="USD">USD</button>
+                    <button type="button" class="btn btn-secondary currencytype" value="EUR">EUR</button>
+                    <button type="button" class="btn btn-secondary currencytype" value="BTC">BTC</button>
+                </div>
+                <div id="resultswindow"></div>
+            </div>
+            <div class="col-md-4 bg-light">
+                <h1 class="title">News</h1>
+                <div id="currencyNews"></div>
+            </div>
+        </div>
         
     </div>
 
@@ -22,6 +55,7 @@
     src="https://code.jquery.com/jquery-3.3.1.js"
     integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
     crossorigin="anonymous"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/app.js"></script>
 </body>
 </html>
