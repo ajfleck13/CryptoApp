@@ -48,3 +48,6 @@ p {
     text-decoration: none;
 }
 
+.largecolumn {
+    min-height: 800px;
+}
