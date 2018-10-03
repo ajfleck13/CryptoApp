@@ -24,6 +24,7 @@ const ajaxFullPriceData = function()
     }).then(function(response){
         console.log(response);
         currentInfo = response;
+        displayInformation();
     })
 
     let newsqueryurl = baseURL + '/data/v2/news/?' + $.param({
@@ -38,8 +39,6 @@ const ajaxFullPriceData = function()
         console.log(response);
         displayNews(response);
     })
-
-    //displayInformation();
 }
 
 const displayInformation = function(){
@@ -81,13 +80,15 @@ const displayNews = function(news) {
 }
 
 const createMediaCard = function(newsobject) {
+    let href = $(`<a class="nodecoration" href = ${newsobject.url} target='_blank'>`);
     let card = $(`<div class="media bg-success">`);
     card.append(`<img class="align-self-center mr-3 mediacardimage" src="${newsobject.imageurl}" alt="Generic placeholder image">`);
     let mediabody = $(`<div class="media-body">`);
     mediabody.append(`<h5 class="mt-0">${newsobject.title}</h5>`);
     mediabody.append(`<p>${newsobject.body}</p>`);
     card.append(mediabody);
-    return card;
+    href.append(card);
+    return href;
 }
 
 const appendButton = function(cryptoSymbol)

@@ -1,3 +1,17 @@
+#header .bottom-header {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+a:hover {
+    color: inherit;
+}
+
 h5 {
     font-size: 24px;
 }
@@ -20,9 +34,15 @@ p {
 
 .media:hover {
     height: auto;
+    border: blue 3px solid;
 }
 
 .mediacardimage {
     width: 60px;
     height: 60px;
 }
+
+.nodecoration {
+    text-decoration: none;
+}
+
