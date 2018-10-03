@@ -1,6 +1,8 @@
-#header .bottom-header {
-    padding-top: 120px;
-    padding-bottom: 120px;
+.jumbotron {
+    padding-top: 10px;
+    padding-bottom: 60px;
+    height: 180px;
+    margin-bottom: 20px;
 }
 
 a {
