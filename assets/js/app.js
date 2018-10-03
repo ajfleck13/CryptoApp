@@ -5,6 +5,17 @@ let compareCurrency = "USD";
 let cryptoType = "BTC";
 let currentInfo;
 
+let aliases = {
+    FROMSYMBOL: "Currency Symbol",
+    PRICE: "Price",
+    OPENDAY: "Opening Price",
+    HIGHDAY: "Today's High",
+    LOWDAY: "Today's Low",
+    MKTCAP: "Market Capitalization",
+    LASTUPDATE: "Last Update",
+    SUPPLY: "Currency Supply",
+}
+
 const requestInformation = function()
 {
     cryptoType = $(this).val();
@@ -55,11 +66,11 @@ const displayInformation = function(){
     let body = $("<tbody>");
     let information = currentInfo.DISPLAY[cryptoType][compareCurrency];
     console.log(information);
-    let keys = Object.keys(information);
+    let keys = Object.keys(aliases);
     for(let i = 0; i < keys.length; i++)
     {
         let row = $("<tr>");
-        row.append(`<td>${keys[i]}<td>`)
+        row.append(`<td>${aliases[keys[i]]}<td>`)
         row.append(`<td>${information[keys[i]]}`);
         body.append(row);
     }
