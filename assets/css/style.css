@@ -14,12 +14,18 @@ a:hover {
     color: inherit;
 }
 
-h5 {
+h4 {
     font-size: 24px;
+    margin-bottom: 0px;
 }
 
 p {
     font-size: 16px;
+}
+
+button {
+    width: 80px;
+    font-weight: bold;
 }
 
 .title {
@@ -27,7 +33,7 @@ p {
 }
 
 .media {
-    height: 20vh;
+    height: 20vw;
     overflow: hidden;
     border: green 3px solid;
     padding: 5px;
@@ -48,6 +54,22 @@ p {
     text-decoration: none;
 }
 
-.largecolumn {
-    min-height: 800px;
+.extrainformation {
+    display: none;
+}
+
+@media screen and (min-width: 760px) {
+    .largecolumn {
+        min-height: 800px;
+    }
+
+    .extrainformation {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .display-4 {
+        font-size: 8vw;
+    }
 }
