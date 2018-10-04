@@ -12,8 +12,8 @@ let aliases = {
     HIGHDAY: "Today's High",
     LOWDAY: "Today's Low",
     MKTCAP: "Market Capitalization",
-    LASTUPDATE: "Last Update",
     SUPPLY: "Currency Supply",
+    LASTUPDATE: "Last Update",
 }
 
 const requestInformation = function()
